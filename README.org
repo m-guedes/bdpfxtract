@@ -12,15 +12,15 @@ https://bpstat.bportugal.pt/conteudos/quadros/2033
 ** Install
 - Requires Python >= 3.9.
 - Install [[https://docs.astral.sh/uv/][uv]].
-- Developer setup:
+- Developer setup with Just and Python 3.14:
 #+begin_src shell
-make setup
+just setup
 #+end_src
 
 ** Usage (FOREX to CSV)
 Run the command through the project environment:
 #+begin_src shell
-uv run bdpfxtract sample.xlsx out.csv
+uv run --locked bdpfxtract sample.xlsx out.csv
 #+end_src
 
 Behavior:
@@ -34,10 +34,10 @@ Input expectations (based on official exports):
   ISO code inside parentheses.
 
 ** Development
-- Linting and formatting via ruff
+- Format with =just fmt= and check with =just lint=.
 - Clean build artifacts:
 #+begin_src shell
-make clean
+just clean
 #+end_src
 
 ** License
