@@ -1,13 +1,13 @@
 from __future__ import annotations
 
 import argparse
-import datetime as dt
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable, Optional
+from typing import Optional
 
 from bdpfxtract.logging import configure_logging
-from bdpfxtract.repository import CsvRepository
 from bdpfxtract.parser import BdpForexParser
+from bdpfxtract.repository import CsvRepository
 
 logger = configure_logging()
 

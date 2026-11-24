@@ -41,6 +41,7 @@ lint.extend-select = [
     "SIM",   # flake8-simplify: Flags unnecessary or redundant code (e.g., `if x == True:`)
     "PERF",  # perflint: Highlights performance anti-patterns (e.g., prefer generator over list when possible)
 ]
+lint.pyupgrade.keep-runtime-typing = true
 fix = true  # Auto-fix applicable lint issues
 
 [tool.isort]
